@@ -1,4 +1,4 @@
-#hist_animiation with uniform distr.
+#histogram animiation of the uniform distribution
 
 library(stringr)
 
@@ -58,7 +58,8 @@ index.uni <- function(ind){
 
 lapply(1:1000, function(x) index.uni(x))
 
-#ImageMagick
+#ImageMagick, creates gif
+
 setwd("~/Documents/New R Projects/Hist_uni/Every 10 Files/")
 my_command <- 'convert *.jpeg -delay 1 -loop 1 animation.gif'
 system(my_command)
@@ -69,6 +70,7 @@ prop <- function(x){
 }
 type <- apply(empty.uni, 2, prop)
 type
+
 
 
 setwd("~/Documents/New R Projects/Animation plots/")
