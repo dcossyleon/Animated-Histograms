@@ -1,5 +1,7 @@
 library(stringr)
 
+#Simulates pseduoreplicated data, which will be plotted in histogram
+
 I=12 #number of litters
 J=rep(c(2,2,4,5,6,7), 2) #number of individuals/litter
 sim.diff=0 #null effect
@@ -54,6 +56,7 @@ my_command <- 'convert *.jpeg -delay 1 -loop 1 animation.gif'
 system(my_command)
 
 
+#Calculates proportion of false positives produced
 prop <- function(x){
   pr <- length(x[x<0.05])/1000 #1000--> number of rows
   return(pr)
